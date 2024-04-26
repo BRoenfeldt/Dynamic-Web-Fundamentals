@@ -1,0 +1,41 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+div.content {
+    border-radius: 5%;
+    border-color: black;
+    line-height: normal;
+    max-width: 10px;
+
+}
+
+.title, .subtitle{
+    text-align: center;
+
+}
+
+.subtitle {
+    color: #006EB6;
+    font-size: small;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+
+}
+
+.list_header {
+    font-style: italic;
+}
+
+.body_p, .mission_list {
+    text-align: left;
+    font-size: 20px;
+}
+
+img.logo {
+    max-width: 150px;
+
+}
