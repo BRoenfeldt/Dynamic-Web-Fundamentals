@@ -38,9 +38,10 @@ div.content {
 
 .list_header {
     font-style: italic;
+    font-size: 20px;
 }
 
-.body_p, .mission_list {
+.body_p, .list_items {
     text-align: left;
     font-size: 20px;
 }
