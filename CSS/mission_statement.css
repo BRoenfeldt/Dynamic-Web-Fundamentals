@@ -54,3 +54,12 @@ img.logo {
     max-width: 150px;
 
 }
+
+.dark  {
+    background-color: black;
+    color: white;
+    border: solid rgb(255, 255, 255) 1px;
+}
+.dark .subtitle{
+    color: :#005EB6;
+}
