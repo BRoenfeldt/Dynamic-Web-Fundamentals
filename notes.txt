@@ -1,1 +1,2 @@
 using ../ will step back a folder 
+using ./ will allow you to always have a reference to another folder that works
