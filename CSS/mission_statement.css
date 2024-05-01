@@ -61,5 +61,7 @@ img.logo {
     border: solid rgb(255, 255, 255) 1px;
 }
 .dark .subtitle{
-    color: :#005EB6;
+    color: #035db1;
+    border-color: black black rgb(201, 201, 201) black;
+
 }
