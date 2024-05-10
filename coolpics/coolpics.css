@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
-@media (max-width: 700px) {
+@media (min-width: 700px) {
     .gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr  1fr;
+    }
+    .menuButton {
+        display: none;
     }
 }
 
@@ -16,6 +19,7 @@
 }
 
 body {
+    text-align: center;
     font-family: var(--primary-font);
     font-size: 1.2em;
     margin: 0 auto;
@@ -23,11 +27,13 @@ body {
 }
 
 a:link, a:visited {
-    color: var(--accent-color);
+    color: var(--text-light);
 }
 
 header {
     background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1em;
 }
 
 img {
@@ -35,10 +41,21 @@ img {
     object-fit: cover;
     height: 250px;
     width: 250px;
+    border-radius: 10%; 
+    border-style: ridge;
+    margin: 1em;
 }
 
 .gallery {
-    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: var(--primary-color);
 }
