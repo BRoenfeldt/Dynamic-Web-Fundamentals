@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
-@media (min-width: 700px) {
-    .gallery {
-        grid-template-columns: 1fr 1fr  1fr;
-    }
-    .menuButton {
-        display: none;
-    }
-}
+
 
 :root {
     --primary-color: #52489c;
@@ -50,6 +43,17 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;    
+    }
+    .menuButton {
+        display: none;
+    }
 }
 
 footer {
