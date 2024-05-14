@@ -1,9 +1,8 @@
 
-document.addEventListener('DOMContentLoaded',  
-    function () {
-        const selectElement = document.getElementsByClassName("menuButton");
-        selectElement.addEventListener('click', function() {
-            console.log("clicked");
-        })
-    }
-);
+function buttonClickPrint(){
+    const menu = document.getElementById("headerMenu");
+    menu.classList.toggle('hidden')
+}
+
+const button = document.getElementById("menuButton");
+button.addEventListener('click', buttonClickPrint());

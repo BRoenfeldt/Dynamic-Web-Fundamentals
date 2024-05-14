@@ -51,7 +51,7 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
         place-items: center;    
     }
-    .menuButton {
+    #menuButton {
         display: none;
     }
 }
@@ -64,8 +64,6 @@ footer {
     background-color: var(--primary-color);
 }
 
-@media screen and (max-width: 700px) {
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
 }
