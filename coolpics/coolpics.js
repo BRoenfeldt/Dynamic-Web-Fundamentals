@@ -1,8 +1,12 @@
-
 function toggleHeadMenu(){
     const menu = document.getElementById("headerMenu");
     menu.classList.toggle('hidden')  
 }
+
+const button = document.getElementById("menuButton");
+button.addEventListener('click', toggleHeadMenu);
+const image = document.getElementById("gallery");
+image.addEventListener('click', closeViewer);
 
 function viewHandler(){
     const view = document.getElementById("viewCloser");
@@ -16,9 +20,6 @@ function viewerTemplate(pic, alt) {
       </div>`;
   }
 
-
-const button = document.getElementById("menuButton");
-button.addEventListener('click', toggleHeadMenu);
 
 const xButton = document.getElementById("viewCloser");
 xButton.addEventListener('click', closeViewer);
@@ -42,8 +43,8 @@ function viewHandler(event) {
     closeButton.addEventListener("click", closeViewer);
   }
   
-  // Function to close the image viewer
+  // Function to close the toggle the viewer
   function closeViewer() {
-    const imageViewer = document.getElementById("viewCloser");
+    const imageViewer = document.getElementById("viewer");
     imageViewer.classList.toggle("hidden");
 }
