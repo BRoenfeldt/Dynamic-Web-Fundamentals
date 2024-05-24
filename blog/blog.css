@@ -60,15 +60,18 @@ a {
     border: 3px solid var(--text-dark);
 }
 
-.contentSkip {
+
+
+#contentSkip {
     position: absolute;
-    top: -1000px;
-    left: -1000px;
+    top: -40px;
+    left: -40px;
 }
 
-.contentSkip a:focus {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    color: black;
+#contentSkip :focus {
+    position: relative;
+    margin: 0 auto;
+    top: 70px;
+    left: 50px;
+    color: black
 }
