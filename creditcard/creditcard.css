@@ -1,0 +1,25 @@
+
+#cardImage {
+    height: 500px;
+    display: grid;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+#cardFront {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+#cardBack {
+    display: grid;
+    grid-gap: 10px;
+    margin: 10px;
+}
