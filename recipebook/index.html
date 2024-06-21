@@ -5,23 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipebook.css">
+    <script src="recipe.js" defer></script>
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
+    
 </head>
 <body>
     <header>
-        <div id="header">
-            <h1>Recipe Book</h1>
-        </div>
+        <img src="images/recipe-book.png" alt="logo">
+        <h1>Recipe Book</h1>
     </header>
     <div id="searchBar">
         <input type="text" id="search" placeholder="Search for recipes...">
     </div>
     <div id="recipes">
-        <img src="foodImg" alt="food">
-        <div id="tag1">tag1</div>
-        <div id="tag2">tag2</div>
-        <h1 id="recipeName">Recipe Name</h1>
-        <div id="rating">*****</div>
-        <p id="description">This is where the description of the recipe goes</p>
+        <p id="author"></p>
+        <p id="url"></p>
+        <p id="isBasedOn"></p>
+        <p id="cookTime"></p>
+        <p id="datePublished"></p>
+        <p id="tags"></p>
+        <p id="description"></p>
+        <img id="image" src="" alt="recipe image">
+        <p id="recipeIngredient"></p>
+        <p id="name"></p>
+        <p id="prepTime"></p>
+        <p id="recipeInstructions"></p>
+        <p id="recipeYield"></p>
+        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
+        </span>
     </div>
     <footer id="footer">
         <div class="social">
