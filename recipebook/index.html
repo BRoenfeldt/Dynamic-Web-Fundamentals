@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipebook.css">
-    <script src="recipe.js" defer></script>
+    <script src="recipe.mjs" defer></script>
     <meta property="og:title" content="Page Title">
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website">
     <meta property="og:description" content="Page Description">
     <meta property="og:image" content="URL to an image">
     <meta property="og:url" content="URL of the page">
@@ -22,28 +22,7 @@
     <div id="searchBar">
         <input type="text" id="search" placeholder="Search for recipes...">
     </div>
-    <div id="recipes">
-        <p id="author"></p>
-        <p id="url"></p>
-        <p id="isBasedOn"></p>
-        <p id="cookTime"></p>
-        <p id="datePublished"></p>
-        <p id="tags"></p>
-        <p id="description"></p>
-        <img id="image" src="" alt="recipe image">
-        <p id="recipeIngredient"></p>
-        <p id="name"></p>
-        <p id="prepTime"></p>
-        <p id="recipeInstructions"></p>
-        <p id="recipeYield"></p>
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star-empty">⭐</span>
-            <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-    </div>
+    <div id="recipePlacer"></div>
     <footer id="footer">
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
