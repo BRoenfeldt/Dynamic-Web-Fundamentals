@@ -1,14 +1,18 @@
 import recipes from './recipes.mjs';
 
-// Start code for adding recipes
-function renderRecipes() {
-	const recipePlacer = document.getElementById('recipePlacer');
-	let recipeNum = 0
-	recipes.forEach(recipes => {
-		recipeNum += 1;
-		const recipeInsert = `
+function random(num) {
+	return Math.floor(Math.random() * num);
+}
+
+function getRandomListEntry(list) {
+	const listLength = list.length;
+	const randomNum = random(listLength);
+	return list[randomNum];
+}
+
+function recipeTemplate(recipes) {
+	return `
 		<div id="recipes">
-			<div id="${recipeNum}"></div>
 			<p id="author">${recipes.author}</p>
 			<a href="${recipes.url}"id="url">${recipes.url}</a>
 			<p id="isBasedOn">${recipes.isBasedOn}</p>
@@ -27,15 +31,7 @@ function renderRecipes() {
 		</div>
 		<br>		
       `;
-
-		recipePlacer.insertAdjacentHTML('beforeend', recipeInsert);
-	});
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-	renderRecipes();
-});
-// End Code for adding multiple recipes
 
 // Start code for adding a tags list
 function tagsTemplate(tags) {
@@ -72,21 +68,14 @@ function ratingTemplate(rating) {
 }
 // End code for adding a tags list
 
+function renderRecipes(recipeList) {
+	// get the element we will output the recipes into
+	document.getElementById('recipePlacer').innerHTML = recipeList.map(recipeTemplate).join('');
+	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
 
-
-//Start code for picking a random recipe
-function random(num) {
-	return Math.floor(Math.random() * 5);
+	// Set the HTML strings as the innerHTML of our output element.
 
 }
-
-function getRandomListEntry(list) {
-	const listLength = list.length;
-	const randomNum = random(listLength);
-	return list[randomNum];
-}
-//console.log(getRandomListEntry(recipes));
-//end code for picking a random recipe
 
 function init() {
   // get a random recipe
@@ -95,3 +84,30 @@ function init() {
   renderRecipes([recipe]);
 }
 init();
+
+
+
+
+const searchBar = document.getElementById('searchBar')
+searchBar.addEventListener('submit', searchHandler)
+function filter(query) {
+	const filtered = recipes.filter(filterFunction)
+	// sort by name
+	const sorted = filtered.sort(sortFunction)
+		return sorted
+
+}
+
+function searchHandler(e) {
+	e.preventDefault()
+	// get the search input
+	const searchInput = document.getElementById('search').value
+	filter(searchInput)
+  // convert the value in the input to lowercase
+  searchInput = searchInput.toLowerCase()
+  // use the filter function to filter our recipes
+  const filtered = filter(searchInput)
+  // render the filtered list
+  renderRecipes(filtered)
+
+}
