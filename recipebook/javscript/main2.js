@@ -70,9 +70,9 @@ function ratingTemplate(rating) {
 
 function renderRecipes(recipeList) {
 	// get the element we will output the recipes into
-	document.getElementById('recipePlacer').innerHTML = recipeList.map(recipeTemplate).join('');
+	
 	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
-
+	document.getElementById('recipePlacer').innerHTML = recipeList.map(recipeTemplate).join('');
 	// Set the HTML strings as the innerHTML of our output element.
 
 }
@@ -86,28 +86,22 @@ function init() {
 init();
 
 
-
-
-const searchBar = document.getElementById('searchBar')
-searchBar.addEventListener('submit', searchHandler)
 function filter(query) {
-	const filtered = recipes.filter(filterFunction)
-	// sort by name
-	const sorted = filtered.sort(sortFunction)
-		return sorted
+    const filtered = recipes.filter(recipes => {
+        return recipes.name.toLowerCase().includes(query) || recipes.description.toLowerCase().includes(query) || (recipes.tags && recipes.tags.find(tag => tag.toLowerCase().includes(query))) || (recipes.recipeIngredient && recipes.recipeIngredient.find(recipeIngredient => recipeIngredient.toLowerCase().includes(query)));
+    });
 
+    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
 }
 
 function searchHandler(e) {
-	e.preventDefault()
-	// get the search input
-	const searchInput = document.getElementById('search').value
-	filter(searchInput)
-  // convert the value in the input to lowercase
-  searchInput = searchInput.toLowerCase()
-  // use the filter function to filter our recipes
-  const filtered = filter(searchInput)
-  // render the filtered list
-  renderRecipes(filtered)
+	e.preventDefault();
+    const searchBar = document.getElementById('search').value.toLowerCase();
+    const filteredRecipes = filter(searchBar);
+    renderRecipes(filteredRecipes);
 
 }
+
+document.getElementById('searchButton').addEventListener('click', searchHandler);
+document.addEventListener('DOMContentLoaded', init);

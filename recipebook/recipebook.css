@@ -146,7 +146,16 @@ footer img {
     
 }
 
-
+#searchButton {
+    display: flex;
+    margin: 0 auto;
+    justify-content: right;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);;
+}
 
 @media screen and (max-width: 900px) and (min-width: 750px){
     header img {
