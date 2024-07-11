@@ -1,0 +1,74 @@
+:root {
+    --primary-color: pink;
+    --secondary-color: lightblue;
+    --terciary-color: rgba(255, 255, 0, 0.548);
+    --text-dark: black;
+    --background-color: white;
+    --primary-font: "Comic Sans MS", cursive, sans-serif;
+    --secondary-font: "Moon Flower", cursive, sans-serif;
+
+}
+
+* {
+    margin: 0 auto;
+    font-family: var(--primary-font);
+}
+
+h1, p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-family: var(--primary-font);
+}
+
+h1 {
+    padding-top: 15px;
+}
+
+#logo {
+    max-width: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: fit-content;
+    border: 3px, solid, var(--terciary-color);
+}
+
+button {
+    border: 3px, solid, var(--terciary-color);
+}
+
+#square1, #square3, #square5, #square8 {
+    max-width: 200px;
+    max-height: 200px;
+    background-color: var(--secondary-color);
+}
+
+#square0, #square2, #square4,#square6, #square7 {
+    max-width: 200px;
+    max-height: 200px;
+    background-color: var(--primary-color);
+}
+
+img.squareImg:hover {
+    background-color: var(--terciary-color);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#playAgain {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -10px;
+    background-color: var(--primary-color);
+}
