@@ -101,10 +101,18 @@ img {
     max-height: 100%;
 }
 
-#playAgain {
+#dep {
+    display: none;
+    justify-content: center;
+    position: relative;
+    bottom: 400px;
+}
+
+#restart {
     display: flex;
     justify-content: center;
     position: relative;
     bottom: -10px;
     background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
 }
