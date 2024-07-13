@@ -2,9 +2,6 @@
 //set global variable to keep track of how many squares have been clicked
 let squaresClicked = 0;
 
-
-
-
 function winDetection(squaresClicked, event) {
     //Finds pete
     const peteElements = document.getElementsByClassName("square pete");
