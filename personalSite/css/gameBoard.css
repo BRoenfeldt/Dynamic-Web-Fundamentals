@@ -22,15 +22,41 @@ nav {
     background-color: var(--secondary-color);
 }
 
-h1, p {
+
+h1 {
     display: flex;
     text-align: center;
     justify-content: center;
-    padding-bottom: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
 }
 
-h1 {
+h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+
+}
+
+h3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
     padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--terciary-color);
 }
 
 #logo {
@@ -44,7 +70,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     max-width: fit-content;
-    border: 3px, solid, var(--terciary-color);
+    border: 3px solid var(--terciary-color);
 }
 
 button {
@@ -55,12 +81,15 @@ button {
     max-width: 200px;
     max-height: 200px;
     background-color: var(--secondary-color);
+    border: 3px solid var(--terciary-color);
 }
 
 #square0, #square2, #square4,#square6, #square7 {
     max-width: 200px;
     max-height: 200px;
     background-color: var(--primary-color);
+    border: 3px solid var(--terciary-color);
+
 }
 
 img.squareImg:hover {

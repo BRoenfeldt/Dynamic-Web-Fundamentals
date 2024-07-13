@@ -12,6 +12,7 @@
 * {
     margin: 0 auto;
     font-family: var(--primary-font);
+    background-color: var(--background-color);
 }
 
 nav {
@@ -30,17 +31,30 @@ h1 {
     background-color: var(--primary-color);
 }
 
-p {
+h2 {
     display: flex;
     text-align: center;
     justify-content: center;
     padding: 10px;
-    max-width: 70%
-    background-color: (--ter-color);
+    background-color: var(--secondary-color);
+
+}
+
+p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--terciary-color);
 }
 
 h3 {
     display: flex;
     text-align: center;
     justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
 }
