@@ -20,6 +20,7 @@ nav {
     align-items: center;
     padding: 10px;
     background-color: var(--secondary-color);
+    font-size: 1.5em;
 }
 
 
@@ -28,7 +29,9 @@ h1 {
     text-align: center;
     justify-content: center;
     padding: 10px;
+    padding-top: 30px;
     background-color: var(--primary-color);
+    font-size: 2em;
 }
 
 h2 {
@@ -46,6 +49,7 @@ h3 {
     justify-content: center;
     background-color: var(--secondary-color);
     padding: 20px;
+    font-size: 2em;
 }
 
 p {
@@ -57,6 +61,7 @@ p {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: var(--terciary-color);
+    font-size: 1.5em;
 }
 
 #logo {
@@ -74,7 +79,7 @@ p {
 }
 
 button {
-    border: 3px, solid, var(--terciary-color);
+    border: 3px solid var(--terciary-color);
 }
 
 #square1, #square3, #square5, #square8 {
@@ -115,4 +120,17 @@ img {
     bottom: -10px;
     background-color: var(--primary-color);
     border: 3px solid var(--secondary-color);
+    font-size: 1.5em;
 }
+
+#restart:hover {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+}
+
+
+#how_to_play, #objective {
+    padding: 30px;
+    font-size: 1.5em;
+}
+

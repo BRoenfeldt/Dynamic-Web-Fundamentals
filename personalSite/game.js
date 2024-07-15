@@ -2,12 +2,12 @@
 //set global variable to keep track of how many squares have been clicked
 let squaresClicked = 0;
 
-function winDetection(squaresClicked, event) {
+function winDetection(squaresClicked) {
     //Finds pete
     const peteElements = document.getElementsByClassName("square pete");
     //If all squares have been clicked and pete is found on last square, run clickedPete function
     if (squaresClicked == 8) {
-        if (Array.from(peteElements).includes(event.target) == true) {
+        if (Array.from(peteElements).includes("square pete")) {
             clickedPete();
         } else {
             //if pete is not found on last square, alert user that they won and reload the page
@@ -32,6 +32,7 @@ function winDetection(squaresClicked, event) {
             //Log pete was clicked and run clickedPete function
             console.log("Pete was clicked");
             clickedPete();
+            winDetection(squaresClicked);
         });
     }
 
@@ -48,12 +49,12 @@ function winDetection(squaresClicked, event) {
         const buttonImgs = document.getElementsByClassName("square");
 
         Array.from(buttonImgs).forEach(button => {
-            button.addEventListener('click', function (event) {
+            button.addEventListener('click', function () {
                 const img = this.querySelector('img');
                 if (img) {
                     img.src = "images/crumbs.webp";
                     squaresClicked++;
-                    winDetection(squaresClicked, event);
+                    winDetection(squaresClicked);
                 }
             });
         });
@@ -68,6 +69,7 @@ function winDetection(squaresClicked, event) {
     }
 
     function gameover() {
+        //show game over message and reload page
         alert("DON'T EAT PETE! \n\nClick ok to restart the game.");
         location.reload();
     }
